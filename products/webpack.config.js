@@ -12,8 +12,15 @@ module.exports = {
       filename /* sets the name of the manifest file */: 'remoteEntry.js',
       exposes: {
         /* aliases */
-        './ProductsIndex': './src/index',
+        // './ProductsIndex': './src/index',
+        './ProductsIndex': './src/bootstrap', // exports the `mount` function
       },
+      shared: ['faker' /* shared vendor */],
+      // shared: {
+      //   faker: {
+      //     singleton: true,
+      //   },
+      // },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
