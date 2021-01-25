@@ -1,5 +1,1 @@
-import faker from 'faker';
-
-const cartText = `<div>You have ${faker.random.number()} items in your cart</div>`;
-
-document.querySelector('#dev-cart').innerHTML = cartText;
+import('./bootstrap'); // async loading with bootstrap.js allows vendors to be fetched before accessing (in standalone development)
